@@ -8,7 +8,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var navitem = document.querySelectorAll("#nav>li");
-            var divitem = document.querySelectorAll("content>div");
+            var divitem = document.querySelectorAll("main>div");
             Array.prototype.forEach.call(divitem, function(dt){
                 dt.style.display="none";
             });
@@ -37,7 +37,7 @@
         <li data-content="unknown">填空間用的</li>
         <li data-content="contact">聯絡 Davinais</li>
     </ul>
-    <content>
+    <main>
         <div id="about">
             <ul>
                 <li>國立成功大學電機工程學系</li>
@@ -84,7 +84,7 @@
                 <li><a href="https://steamcommunity.com/id/davina0620/">Steam</a></li>
             </ul>
         </div>
-    </content>
+    </main>
 </body>
 
 </html>

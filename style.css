@@ -40,12 +40,12 @@ body {
 #nav li.selected {
     background-color: #4CAF50;
 }
-content ul {
+main ul {
     list-style-type: none;
     margin: auto 12px;
     padding: 0px;
 }
-content li {
+main li {
     padding: 0.8em;
     text-decoration: none;
     text-align: center;
@@ -64,14 +64,14 @@ content li {
     width: 100%;
     height: 100%;
 }
-content li:hover {
+main li:hover {
     background-color: azure;
 }
-content li:first-child {
+main li:first-child {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
-content li:last-child {
+main li:last-child {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     border-bottom-style: none;
