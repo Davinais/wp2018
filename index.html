@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>WP作業</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var navitem = document.querySelectorAll("#nav>li");
+            var divitem = document.querySelectorAll("content>div");
+            Array.prototype.forEach.call(divitem, function(dt){
+                dt.style.display="none";
+            });
+            Array.prototype.forEach.call(navitem, function(it) {
+                it.addEventListener('click', function() {
+                    Array.prototype.forEach.call(navitem, function(rt) {
+                        rt.classList.remove('selected');
+                    });
+                    Array.prototype.forEach.call(divitem, function(dt){
+                        dt.style.display="none";
+                    });
+                    this.classList.add('selected');
+                    document.getElementById(this.dataset.content).style.display="block";
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <ul id="nav">
+        <li data-content="about">關於我</li>
+        <li data-content="course">本學期修課</li>
+        <li data-content="anime">動畫推薦</li>
+        <li data-content="unknown">填空間用的</li>
+        <li data-content="contact">聯絡 Davinais</li>
+    </ul>
+    <content>
+        <div id="about">
+            <ul>
+                <li>國立成功大學電機工程學系</li>
+                <li>107學年度動畫社社長</li>
+                <li>剩下來的都不能吃，還是算了</li>
+            </ul>
+        </div>
+        <div id="course">
+            <ul>
+                <li>現場可規劃邏輯電路設計</li>
+                <li>網際網路程式設計</li>
+                <li>心理學</li>
+                <li>日文（七）</li>
+            </ul>
+            <ul>
+                <li>控制工程</li>
+                <li>電儀表學</li>
+                <li>電磁學（一）</li>
+                <li>電子學（三）</li>
+                <li>電機概論實驗</li>
+                <li>電子學實驗（一）</li>
+                <li>電儀表學實驗</li>
+            </ul>
+        </div>
+        <div id="anime">
+            <ul>
+                <li>SHIROBAKO</li>
+                <li>ゆるキャン△</li>
+                <li>ゆるゆり</li>
+                <li>ご注文はうさぎですか？</li>
+                <li>日常</li>
+                <li>氷菓</li>
+                <li>少女終末旅行</li>
+                <li>ガールズ&amp;パンツァー</li>
+                <li>響け！ユーフォニアム</li>
+                <li>妹さえいればいい。</li>
+            </ul>
+        </div>
+        <div id="unknown"></div>
+        <div id="contact">
+            <ul>
+                <li><a href="https://www.facebook.com/abc.davidchen">Facebook</a></li>
+                <li><a href="https://github.com/davinais">Github</a></li>
+                <li><a href="https://steamcommunity.com/id/davina0620/">Steam</a></li>
+            </ul>
+        </div>
+    </content>
+</body>
+
+</html>
